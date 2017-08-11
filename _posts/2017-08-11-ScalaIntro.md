@@ -94,6 +94,8 @@ object MyClass {
 
 ## 9. Package Object
 - Common과 같은 공통 클래스를 정의하지 않고도 동일 패키지에서 사용하는 변수나 메서드등을 공유 할수 있음
+- 위와 같은 소스에서 org.apache.spark 패키지에 있는 모든 클래스에서 sql 이라는 package object에 정의된 메서드나 변수를 사용 할수 있다.
+
 ````scala
 package org.apache.spark
 
@@ -102,7 +104,6 @@ package object sql {
     type DataFrame = Dataset[Row]
 }
 ````
-- 위와 같은 소스에서 org.apache.spark 패키지에 있는 모든 클래스에서 sql 이라는 package object에 정의된 메서드나 변수를 사용 할수 있다.
 
 ## 10. Type
 - 새로운 사용자 정의 타입을 선언하는 키워드

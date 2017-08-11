@@ -1,14 +1,180 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-11T15:11:50+09:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/08/11/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-08-11T15:02:17+09:00</published><updated>2017-08-11T15:02:17+09:00</updated><id>http://localhost:4000/jekyll/update/2017/08/11/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/08/11/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-11T16:14:46+09:00</updated><id>http://localhost:4000/</id><title type="html">Agramar Knowledge Base</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Scala 기본 문법</title><link href="http://localhost:4000/scala/2017/08/11/ScalaIntro.html" rel="alternate" type="text/html" title="Scala 기본 문법" /><published>2017-08-11T16:02:17+09:00</published><updated>2017-08-11T16:02:17+09:00</updated><id>http://localhost:4000/scala/2017/08/11/ScalaIntro</id><content type="html" xml:base="http://localhost:4000/scala/2017/08/11/ScalaIntro.html">&lt;h2 id=&quot;1-scala-shell&quot;&gt;1. Scala Shell&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;PERL 방식으로 동작&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h2 id=&quot;2-변수-타입과-변수-선언&quot;&gt;2. 변수 타입과 변수 선언&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;변수 선언
+    &lt;ul&gt;
+      &lt;li&gt;var : 일반 변수&lt;/li&gt;
+      &lt;li&gt;val : 상수&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;변수 타입
+    &lt;ul&gt;
+      &lt;li&gt;변수 타입 생략 가능&lt;/li&gt;
+      &lt;li&gt;변수 타입은 변수명 오른쪽에 선언&lt;/li&gt;
+      &lt;li&gt;Byte, Short, Int, Long, Float, Double, Char, Boolean, String&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h2 id=&quot;3-range와-형변환&quot;&gt;3. Range와 형변환&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;사용 방법
+    &lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toList&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;리스트나 배열처럼 보이지만 그냥 Range타입 이다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;4-class-object-companion-object&quot;&gt;4. Class, Object, Companion Object&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Class
+    &lt;ul&gt;
+      &lt;li&gt;선언 방법
+        &lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{...}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Java Class와 다른점
+        &lt;ol&gt;
+          &lt;li&gt;static 키워드를 사용할수 없기에 클래스 내부에 정적 멤버나 함수 선언 불가&lt;/li&gt;
+          &lt;li&gt;setter, getter 자동 생성&lt;/li&gt;
+          &lt;li&gt;클래스 본문이 생성자가 된다.&lt;/li&gt;
+          &lt;li&gt;기본 생성자 인자는 클래스명 다음에 기술&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Object
+    &lt;ul&gt;
+      &lt;li&gt;싱글턴 객체&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Companion Object
+    &lt;ul&gt;
+      &lt;li&gt;해당 클래스와 똑같은 이름의 객체를 생성한 것이 Companion Object&lt;/li&gt;
+      &lt;li&gt;java의 static이 필요한 경우 Companion Object로 대신 할 수 있음&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;클래스 선언 예제
+    &lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 클래스 선언
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyClass&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sayHello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Unit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nc&quot;&gt;MyClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sayHello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 컴패니언 객체 선언
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyClass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sayHello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Unit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sungmin&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;h2 id=&quot;5-trait-상속&quot;&gt;5. Trait, 상속&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Trait : 자바의 추상클래스와 비슷하지만 다중상속이 허용되는 클래스&lt;/li&gt;
+  &lt;li&gt;상속법 : extends Trait1 with Trait2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-apply-함수&quot;&gt;6. Apply 함수&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;객체 이름뒤에 괄호를 넣고 인자값을 넣으면 해당 객체의 apply 메서드 호출로 자동 변환해줌&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;7-tuple-option-case-class&quot;&gt;7. Tuple, Option, Case Class&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tuple
+    &lt;ul&gt;
+      &lt;li&gt;N개의 데이터 쌍을 저장하는 자료 구조
+  ````scala
+  // 튜플 생성
+  val tuple1 = (1, 2)
+  val tuple2 = (“a”, 1, “c”)&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;// 튜플 내용 참조
+  val n1 = tuple1._2
+  val n2 = tuple2._3
+  ````&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Option
+    &lt;ul&gt;
+      &lt;li&gt;N개의 데이터 쌍을 저장하는 자료 구조&lt;/li&gt;
+      &lt;li&gt;튜플과는 달리 값이 있거나 없거나 상관없이 null값을 사용하지 않고 공통된 타입인 Option을 사용할 수 있음&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Case Class
+    &lt;ul&gt;
+      &lt;li&gt;패턴 매치를 위해 최적화된 클래스&lt;/li&gt;
+      &lt;li&gt;case class로 생성하면 companion object, apply, unapply, hashCode, copy, equals, toString 메서드 등이 자동 생성됨&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;8-pattern-match&quot;&gt;8. Pattern Match&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;패턴이 매치 되는지 확인하는&lt;/li&gt;
+  &lt;li&gt;사용법
+    &lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;매치할&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(...)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(...)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;9-package-object&quot;&gt;9. Package Object&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Common과 같은 공통 클래스를 정의하지 않고도 동일 패키지에서 사용하는 변수나 메서드등을 공유 할수 있음&lt;/li&gt;
+  &lt;li&gt;위와 같은 소스에서 org.apache.spark 패키지에 있는 모든 클래스에서 sql 이라는 package object에 정의된 메서드나 변수를 사용 할수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.spark&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Strategy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SparkStrategy&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DataFrame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;10-type&quot;&gt;10. Type&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;새로운 사용자 정의 타입을 선언하는 키워드&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;11-import&quot;&gt;11. Import&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;자바와 비슷하지만, static import의 경우 _를 사용해서 표기
+    &lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;a.b.c._&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;12-function-method&quot;&gt;12. Function, Method&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Javascript처럼 함수를 일반변수처럼 다룰 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;13-generic&quot;&gt;13. Generic&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&amp;lt;&amp;gt;를 사용하는 자바와 달리 []를 사용&lt;/li&gt;
+  &lt;li&gt;자바와 사용법이나 내용이 많이 다름&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;14-암묵적-변환과-타입-클래스-패턴&quot;&gt;14. 암묵적 변환과 타입 클래스 패턴&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;원래 클래스에는 없는 메서드를 암묵적 변환 방법을 사용해서 타입별로 다르게 구현하여 추가하는 방법&lt;/li&gt;
+  &lt;li&gt;스파크SQL에서 자주 쓰는 패턴&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. Scala Shell PERL 방식으로 동작 2. 변수 타입과 변수 선언 변수 선언 var : 일반 변수 val : 상수 변수 타입 변수 타입 생략 가능 변수 타입은 변수명 오른쪽에 선언 Byte, Short, Int, Long, Float, Double, Char, Boolean, String 3. Range와 형변환 사용 방법 (1 to 10 by 2).toList 리스트나 배열처럼 보이지만 그냥 Range타입 이다. 4. Class, Object, Companion Object Class 선언 방법 class a {...} Java Class와 다른점 static 키워드를 사용할수 없기에 클래스 내부에 정적 멤버나 함수 선언 불가 setter, getter 자동 생성 클래스 본문이 생성자가 된다. 기본 생성자 인자는 클래스명 다음에 기술 Object 싱글턴 객체 Companion Object 해당 클래스와 똑같은 이름의 객체를 생성한 것이 Companion Object java의 static이 필요한 경우 Companion Object로 대신 할 수 있음 클래스 선언 예제 // 클래스 선언 class MyClass private(var name: String) { def sayHello(): Unit = { MyClass.sayHello() } } // 컴패니언 객체 선언 object MyClass { def sayHello(): Unit = { println(&quot;Hello&quot; + new MyClass(&quot;sungmin&quot;).name) } } 5. Trait, 상속 Trait : 자바의 추상클래스와 비슷하지만 다중상속이 허용되는 클래스 상속법 : extends Trait1 with Trait2 6. Apply 함수 객체 이름뒤에 괄호를 넣고 인자값을 넣으면 해당 객체의 apply 메서드 호출로 자동 변환해줌 7. Tuple, Option, Case Class Tuple N개의 데이터 쌍을 저장하는 자료 구조 ````scala // 튜플 생성 val tuple1 = (1, 2) val tuple2 = (“a”, 1, “c”) // 튜플 내용 참조 val n1 = tuple1._2 val n2 = tuple2._3 ```` Option N개의 데이터 쌍을 저장하는 자료 구조 튜플과는 달리 값이 있거나 없거나 상관없이 null값을 사용하지 않고 공통된 타입인 Option을 사용할 수 있음 Case Class 패턴 매치를 위해 최적화된 클래스 case class로 생성하면 companion object, apply, unapply, hashCode, copy, equals, toString 메서드 등이 자동 생성됨 8. Pattern Match 패턴이 매치 되는지 확인하는 사용법 (매치할 변수) match { case (...) =&amp;gt; ... case (...) =&amp;gt; ... } 9. Package Object Common과 같은 공통 클래스를 정의하지 않고도 동일 패키지에서 사용하는 변수나 메서드등을 공유 할수 있음 위와 같은 소스에서 org.apache.spark 패키지에 있는 모든 클래스에서 sql 이라는 package object에 정의된 메서드나 변수를 사용 할수 있다. package org.apache.spark package object sql { type Strategy = SparkStrategy type DataFrame = Dataset[Row] } 10. Type 새로운 사용자 정의 타입을 선언하는 키워드 11. Import 자바와 비슷하지만, static import의 경우 _를 사용해서 표기 import a.b.c._ 12. Function, Method Javascript처럼 함수를 일반변수처럼 다룰 수 있음 13. Generic &amp;lt;&amp;gt;를 사용하는 자바와 달리 []를 사용 자바와 사용법이나 내용이 많이 다름 14. 암묵적 변환과 타입 클래스 패턴 원래 클래스에는 없는 메서드를 암묵적 변환 방법을 사용해서 타입별로 다르게 구현하여 추가하는 방법 스파크SQL에서 자주 쓰는 패턴</summary></entry></feed>
