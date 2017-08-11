@@ -1,4 +1,9 @@
-# Scala 기본 문법
+---
+layout: post
+title:  "Scala 기본 문법"
+date:   2017-08-11 16:02:17 +0900
+categories: scala
+---
 
 ## 1. Scala Shell
 - PERL 방식으로 동작
