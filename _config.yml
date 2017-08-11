@@ -60,8 +60,8 @@ lsi: false
 username: agramar
 repo: agramar.github.io
 branch: master
-relative_source: ../jasper/
-destination: ../jasper-pages/
+# relative_source: ../jasper/
+# destination: ../jasper-pages/
 
 exclude:
   - README.md
