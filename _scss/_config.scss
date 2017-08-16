@@ -1,4 +1,4 @@
-/* Colors 
+/* Colors
  * Based on colors from Base16: http://chriskempson.github.io/base16/#default.
  */
 $red:      #ac4142;
@@ -26,7 +26,12 @@ $masthead-title-small-color: #c0c0c0;
 $reverse-layout: true;
 $overlay-sidebar: false;
 
+/* Font Import */
+@import url('/public/font/D2Coding-1.2/D2Coding.ttc');
+@import url('/public/font/D2Coding-1.2/D2Coding.ttf');
+@import url('/public/font/D2Coding-1.2/D2CodingBold.ttf');
+
 /* Font stack */
-$font-serif: "PT Serif", Georgia, "Times New Roman", serif;
-$font-sans: "PT Sans", Helvetica, Arial, sans-serif;
+$font-serif: "D2Coding", "PT Serif", Georgia, "Times New Roman", serif;
+$font-sans: "D2Coding", "PT Sans", Helvetica, Arial, sans-serif;
 $font-font-awesome: FontAwesome;
