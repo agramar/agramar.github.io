@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.3.3
 
-install: gem install jekyll html-proofer
+install: gem install bundler && bundle install
 script: jekyll build && htmlproof ./_site
 
 # 브랜치 화이트리스트. GitHub Pages 에서만 사용됨
