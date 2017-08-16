@@ -49,8 +49,8 @@ tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
 hero:
-  image: /public/img/we_will_be_giants_by_yalestewart.jpg
-  caption: Hello &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">World</a>
+  image: /public/img/메레기.jpg
+  caption: Hello &copy; <a href="http://agramar.github.io">World</a>
 
 # Puglins
 mathjax: true # whether support mathjax
