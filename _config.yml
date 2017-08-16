@@ -56,3 +56,6 @@ hero:
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-104415135-1' # leave blank if you don't want google analytics
 disqus_short_name: 'agramar-github-io' # leave blank if you don't want disqus
+
+exclude: [vendor]
+
