@@ -3,7 +3,7 @@ rvm:
 - 2.3.3
 
 install: gem install jekyll html-proofer
-script: jekyll build && htmlproof ./_site
+script: jekyll build
 
 # 브랜치 화이트리스트. GitHub Pages 에서만 사용됨
 branches:
