@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spark Configuration
-categoriy: Spark
+category: Spark
 tag: Spark
 ---
 ## 1. 스파크 프로퍼티

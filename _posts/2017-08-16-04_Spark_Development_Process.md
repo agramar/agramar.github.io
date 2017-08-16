@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spark 개발 프로세스
-categoriy: Spark
+category: Spark
 tag: Spark
 ---
 ## 1. 공통 개발 프로세스

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spark 설치
-categoriy: Spark
+category: Spark
 tag: Spark
 ---
 

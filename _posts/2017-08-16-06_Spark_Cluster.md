@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spark Cluster
-categoriy: Spark
+category: Spark
 tag: Spark
 ---
 ## 1. Spark Cluster 환경
