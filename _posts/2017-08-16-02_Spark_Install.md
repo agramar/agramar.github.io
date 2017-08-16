@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spark 설치
+title: 02 Spark 설치
 category: Spark
 tag: Spark
 ---

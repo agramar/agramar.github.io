@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spark 개관
+title: 01 Spark 개관
 category: Spark
 tag: Spark
 ---
@@ -28,7 +28,7 @@ tag: Spark
 - 다양한 언어 지원(스파크 구현 자체는 Scala, API 지원은 Scala, Java, Python, R)
 
 #### Spark Stack 구조
-![Alt text]({{ site.url }}/public/img/spark_stack.png)
+![Alt text](/public/img/spark_stack.png)
 - 인프라 계층 : 먼저 스파크가 기동하기 위한 인프라는 Spark 가 독립적으로 기동할 수 있는 Standalone Scheudler가 있고 (그냥 스팍만 OS위에 깔아서 사용한다고 보면 됨) 또는 하둡 종합 플랫폼인 YARN 위에서 기동될 수 있고 또는 Docker 가상화 플랫폼인 Mesos 위에서 기동될 수 있다.
 - Spark Core : 메모리 기반의 분산 클러스터 컴퓨팅 환경인 Spark 코어가 그 위에 올라간다. 
 - Built-in Library
@@ -38,7 +38,7 @@ tag: Spark
     - GraphX (graph)            : 그래프 데이타 프로세싱
 
 #### Spark Cluster 구조
-![Alt text]({{ site.url }}/public/img/cluster_overview.png)
+![Alt text](/public/img/cluster_overview.png)
 1. Driver Program : 스파크 프로그램. 여러 개의 병렬적 작업으로 나눠져 Worker Node에 있는 Executor에서 실행
 2. SparkCotext : 메인 시작 지점. 스파크API를 활용하기 위해 필요하다. 클러스터의 연결을 보여주고 RDD를 만드는데 사용
 3. Cluster Manager : Standalone, YARN. Mesos 등 클러스터 자원 관리자
