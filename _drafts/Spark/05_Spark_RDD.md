@@ -1,9 +1,5 @@
----
-layout: post
-title: 05 Spark RDD
-category: Spark
-tag: Spark
----
+# Spark RDD
+
 ## 1. RDD에 관한 배경 지식
 1. 스파크 클러스터
     - 클러스터 : 여러대의 서버가 한대의 서버처럼 동작하는 것
@@ -52,10 +48,10 @@ tag: Spark
     - SequenceFileRDDFunctions : 하둡의 시퀀스 파일을 다루기 위한 연산 제공
     
 12. RDD Process
-![AltText](/public/img/Spark/sparkRDD.png)  
+![AltText](images/sparkRDD.png)  
 
 ## 2. Spark Context 생성 방법
-```scala
+````scala
 // Spark Context 설정정보
 val conf = new SparkConf()
   .setMaster("local[*]")   // [필수]마스터 정보  
@@ -63,16 +59,16 @@ val conf = new SparkConf()
 
 // Spark Context 생성
 val sc = new SparkContext(conf)
-```
+````
 ## 3. RDD 생성 방법
 - 기본 RDD 생성
-```scala
+````scala
 val rdd1 = sc.parallelize(List("a", "b","c","d","e"))
-```
+````
 - 외부데이터를 읽어서 RDD 생성
-```scala
+````scala
 val rdd1 = sc.textFile("<spark_home_dir>/README.md")
-```
+````
 
 ## 4. RDD Transformation
 - RDD를 가공해서 RDD로 반환
@@ -249,11 +245,11 @@ val rdd1 = sc.textFile("<spark_home_dir>/README.md")
         1. 공유하고자 하는 데이터를 포함한 오브젝트 생성
         2. 생성된 오브젝트를 broadcast() 메서드의 인자로 지정해 실행
         3. 생성된 broadcast 변수는 value() 메서드를 통해 접근 가능
-        ```scala
+        ````scala
         val broadcastUsers = sc.broadcast(Set("u1", "u2"))
         val rdd = sc.parallelize(List("u1", "u3", "u3", "u4", "u5", "u6"), 3)
         val result = rdd.filter(broadcastUsers.value.contains(_))
-        ```
+        ````
     - 동일한 스테이지 내에서 실행되는 테스크 간에는 동작에 필요한 변수를 자동으로 브로드캐스트 변수를 이용해 전달
 
 2. 어큐뮬레이터(Accumulators)
@@ -264,7 +260,7 @@ val rdd1 = sc.textFile("<spark_home_dir>/README.md")
         2. DoubleAccumulator
         3. CollectionAccumulator
     - Accumulator 사용 방법
-    ```scala
+    ````scala
     val acc1 = sc.longAccumlatior("invalidFormat")
     val acc2 = sc.collectionAccumlator[String]("invalidFormat2")
     va data = List("U1:Addr1", "U2:Addr2", "U3", "U4:Addr4", "U5;Addr5", "U6:Addr6", "U7::Addr7")
@@ -276,9 +272,9 @@ val rdd1 = sc.textFile("<spark_home_dir>/README.md")
     }
     println("잘못된 데이터 수 : " + acc1.value)
     println("잘못된 데이터 : " + acc2.value)
-    ```   
+    ````   
     - 사용자 정의 Accumulator
-    ```scala
+    ````scala
     import org.apache.spark.{SparkConf, SparkContext}
     import org.apache.spark.util.AccumulatorV2
     
@@ -318,7 +314,7 @@ val rdd1 = sc.textFile("<spark_home_dir>/README.md")
         _record.amount
       }
     }
-    ```
+    ````
 
 ## References
 - 빅데이터 분석을위한 스파크2 프로그래밍(백성민, 위키북스, 2017)
