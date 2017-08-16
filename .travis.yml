@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e # halt script on error
 
-# jekyll Build 테스트
-jekyll build
+bundle exec jekyll build
+bundle exec htmlproofer ./_site
