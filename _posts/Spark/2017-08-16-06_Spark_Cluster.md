@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spark Cluster
+title: 06 Spark Cluster
 category: Spark
 tag: Spark
 ---
@@ -11,7 +11,7 @@ tag: Spark
 - 스파크에서는 클러스터 매니저를 일관되게 관리할수 있도록 추상화된 클러스터 모델을 제공
 
 ## 2. Spark Cluster 구조
-![Alt text](images/cluster_overview.png)
+![Alt text](/public/img/Spark/cluster_overview.png)
 1. Driver Program : 스파크 프로그램. 여러 개의 병렬적 작업으로 나눠져 Worker Node에 있는 Executor에서 실행
 2. SparkCotext : 메인 시작 지점. 스파크API를 활용하기 위해 필요하다. 클러스터의 연결을 보여주고 RDD를 만드는데 사용
 3. Cluster Manager : Standalone, YARN. Mesos 등 클러스터 자원 관리자
@@ -19,7 +19,7 @@ tag: Spark
 5. Executor : 프로세스. 하나의 워커 노드에 여러 개 가능
 
 ## 3. 클러스터 모드를 위한 일반적인 시스템 구성
-![Alt text](images/ClusterSystem.png)
+![Alt text](/public/img/Spark/ClusterSystem.png)
 - 클러스터 모드 시스템 구성
     1. 로컬 개발 서버  
         - 개발환경을 의미

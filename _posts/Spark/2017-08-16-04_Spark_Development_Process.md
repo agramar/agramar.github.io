@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spark 개발 프로세스
+title: 04 Spark 개발 프로세스
 category: Spark
 tag: Spark
 ---

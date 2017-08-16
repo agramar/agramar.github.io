@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spark Configuration
+title: 07 Spark Configuration
 category: Spark
 tag: Spark
 ---
