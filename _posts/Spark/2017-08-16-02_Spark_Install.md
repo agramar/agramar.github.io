@@ -7,12 +7,12 @@ tags:
 - Install
 ---
 
-## 1. 실행환경
+# 1. 실행환경
 - OS : **UNIX-like systems(Linux, Mac OS)**, Windows
 - 언어 : **Java8+**, Python 2.7+/3.4+, Scala 2.11.x
 
-## 2. 실행환경 설치
-#### Linux (Ubuntu 16.04 LTS)
+# 2. 실행환경 설치
+## Linux (Ubuntu 16.04 LTS)
 1. **설치과정에서 필요한 공통 소프트웨어 설치[필수]**
     ```
     # apt-get update
@@ -54,7 +54,7 @@ tags:
 5. Hadoop 환경 설정
 
 
-#### Windows 10
+## Windows 10
 - [필수]Java 설치
     1. Java 설치
     2. 환경변수 설정
@@ -102,12 +102,12 @@ tags:
         > %SPARK_HOME%\bin\winutils.exe chmod 777 \tmp\hive
         ```
 
-#### Mac OS
+## Mac OS
 
-## 3. 개발 환경 설치
+# 3. 개발 환경 설치
 - 선행조건 : 실행환경 설치
 
-#### Windows 10
+## Windows 10
 - Scala
     1. Scala-IDE 설치
     2. SBT 설치
@@ -119,16 +119,16 @@ tags:
     1. Eclipse 설치
     2. Maven 설치
 
-#### Linux
+## Linux
 
-#### MacOS
+## MacOS
 
-## 4. 실행 확인
+# 4. 실행 확인
 ```
 # spark-shell
 ```
 - 오류 로그없이 실행되면 정상 실행된 것임
 
-#### References
+# References
 - 빅데이터 분석을 위한 스파크2 프로그래밍
 - [Apache Spark installation on Windows 10](https://hernandezpaul.wordpress.com/2016/01/24/apache-spark-installation-on-windows-10/)

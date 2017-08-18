@@ -6,13 +6,13 @@ tags:
 - Spark
 - Cluster
 ---
-## 1. Spark Cluster 환경
+# 1. Spark Cluster 환경
 - 여러 대의 서버로 구성된 환경
 - 클러스터 환경에서는 여러 서버를 하나의 서버인 것처럼 다뤄야 하기 때문에 이를 도와주는 분산 작업 관리 기능이 필요
 - 분산 작업 관리를 해주는 역할을 하는것을 클러스터 매니저라고 하며 Standalone, Yarn, Mesos 3가지종류의 클러스터 매니저가 있음
 - 스파크에서는 클러스터 매니저를 일관되게 관리할수 있도록 추상화된 클러스터 모델을 제공
 
-## 2. Spark Cluster 구조
+# 2. Spark Cluster 구조
 ![Alt text](/public/img/Spark/cluster_overview.png)
 1. Driver Program : 스파크 프로그램. 여러 개의 병렬적 작업으로 나눠져 Worker Node에 있는 Executor에서 실행
 2. SparkCotext : 메인 시작 지점. 스파크API를 활용하기 위해 필요하다. 클러스터의 연결을 보여주고 RDD를 만드는데 사용
@@ -20,7 +20,7 @@ tags:
 4. Worker Node : 하드웨어 서버. 하나의 물리적 장치에 여러 개도 가능
 5. Executor : 프로세스. 하나의 워커 노드에 여러 개 가능
 
-## 3. 클러스터 모드를 위한 일반적인 시스템 구성
+# 3. 클러스터 모드를 위한 일반적인 시스템 구성
 ![Alt text](/public/img/Spark/ClusterSystem.png)
 - 클러스터 모드 시스템 구성
     1. 로컬 개발 서버  
@@ -48,7 +48,7 @@ tags:
         - 애플리케이션을 실행한 프로세스는 클로스터에게 작업 실행만 요청하고, 드라이버 프로그램은 클러스터 내부에서 구동
         - 성능상의 이점이 있으나 디버깅이 어려움
 
-## 4. 클러스터 매니저
-### 4.1. Standalone
-### 4.2. YARN
-### 4.3. MESOS
+# 4. 클러스터 매니저
+## 4.1. Standalone
+## 4.2. YARN
+## 4.3. MESOS
