@@ -2,7 +2,7 @@
 layout: post
 title: 02 Spark 설치
 category: Spark
-tag: Spark
+tag: Spark, Install
 ---
 
 ## 1. 실행환경
