@@ -2,7 +2,9 @@
 layout: post
 title: 06 Spark Cluster
 category: Spark
-tag: Spark, Cluster
+tags: 
+- Spark
+- Cluster
 ---
 ## 1. Spark Cluster 환경
 - 여러 대의 서버로 구성된 환경
