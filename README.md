@@ -8,7 +8,12 @@ This page made by Jekyll Template based on [Lanyon](https://github.com/poole/lan
 ## Posting Guide
 - 포스팅 파일 양식 : YYYY-MM-DD-Title.md
 - 이미지 경로 : /public/img/
-
+- 태그 사용법
+```
+tags: 
+- tag1
+- tag2
+```
 
 ## License
 Open sourced under the [MIT license](LICENSE).

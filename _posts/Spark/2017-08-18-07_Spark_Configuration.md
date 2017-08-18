@@ -2,7 +2,9 @@
 layout: post
 title: 07 Spark Configuration
 category: Spark
-tag: Spark
+tags:
+- Spark
+- Configuration
 ---
 ## 1. 스파크 프로퍼티
 

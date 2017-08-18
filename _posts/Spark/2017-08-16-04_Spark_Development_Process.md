@@ -2,7 +2,9 @@
 layout: post
 title: 04 Spark 개발 프로세스
 category: Spark
-tag: Spark
+tags:
+- Spark
+- Development
 ---
 ## 1. 공통 개발 프로세스
 1. SparkContext생성

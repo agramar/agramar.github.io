@@ -2,7 +2,9 @@
 layout: post
 title: 01 Spark 개관
 category: Spark
-tag: Spark, Introduction
+tags:
+- Spark
+- Introduction
 ---
 
 #### Spark란
