@@ -49,6 +49,6 @@ tags:
         - 성능상의 이점이 있으나 디버깅이 어려움
 
 ## 4. 클러스터 매니저
-1. Standalone
-2. YARN
-3. MESOS
+### 4.1. Standalone
+### 4.2. YARN
+### 4.3. MESOS

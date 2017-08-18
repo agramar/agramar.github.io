@@ -32,6 +32,7 @@ author:
     # email:     http://iamsjh1017@gmail.com/
     # linkedin:  https://www.linkedin.com/in/
     # facebook:  <hide>
+    # twitter:
 
 # Navigation (2nd level links supported)
 nav:
@@ -50,7 +51,7 @@ category_page: '/blog/categories/'
 
 hero:
   image: /public/img/main.jpg
-  caption: Hello &copy; <a href="http://agramar.github.io">World</a>
+  caption: <br>Hello &copy; <a href="http://agramar.github.io">World</a>
 
 # Puglins
 mathjax: true # whether support mathjax
