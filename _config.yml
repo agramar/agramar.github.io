@@ -1,9 +1,9 @@
 # Site Info
-title: Agramar Github Page
-tagline: 'Agramar Github Page'
-description: 'description'
-baseurl: ""
-url: http://agramar.github.io
+title: AGRAMAR Private Page
+tagline: 'Bullshit Page'
+description: '우당탕탕'
+baseurl: ''
+url: 'http://agramar.github.io'
 logo: '/public/logo.png'
 
 # Site configurations
@@ -12,7 +12,7 @@ gems:
 markdown: kramdown
 kramdown:
   input: GFM
-excerpt_separator: "<!-- more -->"
+excerpt_separator: '<!-- more -->'
 sass:
   style: compressed
   sass_dir: _scss
@@ -24,8 +24,8 @@ version: 1.0.0
 
 # About/contact
 author:
-  name: agramar
-  description: agramar
+  name: AGRAMAR
+  description: AGRAMAR
   gravatar: c5fa24190a425a6101d8411755ffa97c # md5 hash of your email address
   contact:
     github:    https://github.com/agramar
@@ -49,7 +49,7 @@ tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
 hero:
-  image: /public/img/남극.jpg
+  image: /public/img/main.jpg
   caption: Hello &copy; <a href="http://agramar.github.io">World</a>
 
 # Puglins
