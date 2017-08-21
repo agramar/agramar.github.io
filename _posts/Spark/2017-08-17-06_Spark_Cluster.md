@@ -52,3 +52,6 @@ tags:
 ## 4.1. Standalone
 ## 4.2. YARN
 ## 4.3. MESOS
+
+# References
+- 빅데이터 분석을위한 스파크2 프로그래밍(백성민, 위키북스, 2017)

@@ -27,7 +27,7 @@ tags:
 ## 2.4. 지연 동작
 - Action 연산이 호출되기 전까지 Transformation 연산은 실제로 수행되지 않음
 
-## 2.5. 데이터 프로세스
+## 2.5. 데이터 처리 프로세스
 ![AltText](/public/img/Spark/sparkRDD.png)
 
 
@@ -86,7 +86,7 @@ tags:
 - RDD, DataFrame, DataSet이 어떤 것인지에 대한 것은 알아둘 필요가 있지만 RDD와 DataFrame의 장점을 포괄하고 있는 DataSet을 사용하는 편이 좋다고 생각된다. 실제 최근에 스파크에 추가된 샘플 코드의 경우는 DataSet을 이용해 처리 하는 경우가 더 많았음
 
 # References
-- 빅데이터 분석을 위한 스파크2 프로그래밍
-- https://www.slideshare.net/KangDognhyun/apache-spark-70360736
-- http://blog.naver.com/tajogood/220783546981
-- http://why-not-learn-something.blogspot.kr/2016/07/apache-spark-rdd-vs-dataframe-vs-dataset.html
+- [빅데이터 분석을위한 스파크2 프로그래밍(백성민, 위키북스, 2017)](http://wikibook.co.kr/spark/)
+- [https://www.slideshare.net/KangDognhyun/apache-spark-70360736](https://www.slideshare.net/KangDognhyun/apache-spark-70360736)
+- [http://blog.naver.com/tajogood/220783546981](http://blog.naver.com/tajogood/220783546981)
+- [http://why-not-learn-something.blogspot.kr/2016/07/apache-spark-rdd-vs-dataframe-vs-dataset.html](http://why-not-learn-something.blogspot.kr/2016/07/apache-spark-rdd-vs-dataframe-vs-dataset.html)

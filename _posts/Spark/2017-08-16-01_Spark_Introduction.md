@@ -77,8 +77,8 @@ Spark application : 클러스터에서 독립된 프로세스들의 묶음으로
 - 웹기반 노트북, 시각화툴 : Apache Zeppelin
 
 # References
+- [빅데이터 분석을위한 스파크2 프로그래밍(백성민, 위키북스, 2017)](http://wikibook.co.kr/spark/)
 - [스파크 공식 홈페이지](https://Spark.apache.org/)
 - [스파크 2.2.0 Documents](https://Spark.apache.org/docs/latest/index.html)
 - [조대협의 블로그](http://bcho.tistory.com/)
-- 빅데이터 분석을위한 스파크2 프로그래밍(백성민, 위키북스, 2017)
-- https://www.slideshare.net/sangwookimme/apachezeppelin
+- [https://www.slideshare.net/sangwookimme/apachezeppelin](https://www.slideshare.net/sangwookimme/apachezeppelin)

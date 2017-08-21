@@ -21,3 +21,6 @@ tags:
 
 
 # 4. 스케줄링
+
+# References
+- [빅데이터 분석을위한 스파크2 프로그래밍(백성민, 위키북스, 2017)](http://wikibook.co.kr/spark/)

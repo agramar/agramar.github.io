@@ -130,5 +130,5 @@ tags:
 - 오류 로그없이 실행되면 정상 실행된 것임
 
 # References
-- 빅데이터 분석을 위한 스파크2 프로그래밍
+- [빅데이터 분석을위한 스파크2 프로그래밍(백성민, 위키북스, 2017)](http://wikibook.co.kr/spark/)
 - [Apache Spark installation on Windows 10](https://hernandezpaul.wordpress.com/2016/01/24/apache-spark-installation-on-windows-10/)
