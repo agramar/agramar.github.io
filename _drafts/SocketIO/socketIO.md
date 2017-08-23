@@ -6,6 +6,7 @@ SocketIO
 
 ### 동작 방식
 ![Alt text](socketIO.png)
+- Server의 socketIO모듈과 클라이언트의 socketIO모듈이 통신(Websocket, Polling, Flash Polling 등 브라우저 지원 여부에 따라 자동 선택)하여 이벤트 발생시 서로의 함수를 emit해주는 방식으로 동작 
 
 ### 장점
 - 브라우저와 웹 서버의 종류와 버전을 파악하여 가장 적합한 기술을 선택하여 사용하는 방식이기 때문에 브라우저의 종류와 상관없이 실시간 웹 구현 가능
