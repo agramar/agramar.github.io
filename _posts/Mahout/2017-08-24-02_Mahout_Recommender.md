@@ -1,12 +1,18 @@
-# Mahout Recommender
+---
+layout: post
+title: 01 Mahout 추천기
+category: Mahout
+tags:
+- Mahout
+- Recommender
+---
+## 1. Mahout Recommender
+- 머하웃 추천
 
-#### Mahout 이란?
-- 아파치 소프트웨어 재단의 한 프로젝트로서 분산처리가 가능하고 확장성을 가진 기계학습용 라이브러리
-
-#### 추천 시스템 아키텍쳐
+## 2. 추천 시스템 아키텍쳐
 ![아키텍쳐](taste-architecture.png)
 
-#### 추천 시스템 처리 과정
+## 3. 추천 시스템 처리 과정
 1. 데이터 모델 생성
     - 입력 데이터 규칙 : 사용자ID(정수, Long), 아이템ID(정수, Long), 선호수치(큰 값일수록 선호도가 높은 실수, 일반적으로 0~5사이의 값을 많이 사용, Double)
     - 선호수치 데이터가 없을 경우 Boolean Preference를 이용하여 분석 가능 
@@ -57,6 +63,6 @@
     - param : UserBasedRecommender, ItemBasedRecommender
     - return : Recommender
 
-#### References
+## Reference
 - http://mahout.apache.org/users/recommender/recommender-documentation.html
 - https://www.slideshare.net/pitzcarraldo/mahout-cook-book
