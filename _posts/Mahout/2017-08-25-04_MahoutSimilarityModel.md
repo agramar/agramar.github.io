@@ -7,7 +7,7 @@ tags:
 - Recommender
 - Similarity
 ---
-## 1. 아이템 기반 유사도 모델
+## 1. 아이템 기반 추천 유사도 모델
 - PearsonCorrelationSimilarity
 - EuclideanDistanceSimilarity
 - LogLikelihoodSimilarity
@@ -15,7 +15,7 @@ tags:
 - TanimotoCoefficientSimilarity
 - UncenteredCosineSimilarity
 
-## 2. 사용자 기반 유사도 모델
+## 2. 사용자 기반 추천 유사도 모델
 - PearsonCorrelationSimilarity
 - EuclideanDistanceSimilarity
 - LogLikelihoodSimilarity
@@ -23,3 +23,5 @@ tags:
 - TanimotoCoefficientSimilarity
 - UncenteredCosineSimilarity
 - SpearmanCorrelationSimilarity
+
+## 3. 사용자 정의 유사도 모델
