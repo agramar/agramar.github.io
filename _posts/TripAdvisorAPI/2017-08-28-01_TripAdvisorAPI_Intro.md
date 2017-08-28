@@ -1,4 +1,12 @@
-# TripAdvisor API 가이드
+---
+layout: post
+title: 01 TripAdvisor API 가이드
+category: TripAdvisor
+tags:
+- TripAdvisor
+- API
+- Introduction
+---
 - TripAdvisor란?
 - 공식 Document URL : https://developer-tripadvisor.com/home/
 
