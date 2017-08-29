@@ -56,7 +56,7 @@ tags:
 - 개발완료후 서비스 승인이 되면 운영용 API KEY로 전환(일간 요청 10,000회 제한)
 - TripAdvisor에서는 API 응답 결과를 24시간동안 캐싱할 것을 추천함(파라미터로 자동 캐싱 키 제공)
 - API KEY 보안에 각별히 신경 쓸것 (특히 클라이언트 단에서 요청 할때)
-- Response Type : JSON
+- Response Data Type : JSON
 
 ### 2.4. Content API 목록
 - Request URL Example : http://api.tripadvisor.com/api/partner/2.0/location/155507?key="API KEY"
@@ -91,41 +91,62 @@ tags:
     | price_level | 통화 단위 |
         
     - Address and Geocoding(주소 및 좌표)
-        - address_obj : 주소, 우편번호
-        - logitude : 경도
-        - latitude : 위도
-        - ancestors : 상위 주소(도시, 주, 국가)
-        
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | address_obj | 주소, 우편번호 |
+    | logitude | 경도 |
+    | latitude | 위도 |
+    | ancestors | 상위 주소(도시, 주, 국가) |
+    
     - Popularity Ranking(지역 평점 랭킹)
-        - raking_data : 지역 평점 랭킹 정보
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | raking_data | 지역 평점 랭킹 정보 |
         
     - Bubble Ratings & Percent Recommended(총 평점 및 평점 이미지)
-        - rating_image_url : 전체 평점 이미지 URL
-        - rating : 전체 평점
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | rating_image_url | 전체 평점 이미지 URL |
+    | rating | 전체 평점 |
     
     - Subratings(항목별 평점)
         - 위치, 숙박, 방, 서비스, 가치, 청결도
     
     - Review Count and Breakdowns(리뷰 평점 분포도, 태그 정보 분포도)
-        - review_rating_count : 리뷰 평점 분포도
-        - trip_type : 태그 정보 분포도
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | review_rating_count | 리뷰 평점 분포도 |
+    | trip_type | 태그 정보 분포도 |
     
     - Category, Subcategories, Groups, and Types
-        - category : 큰 카테고리(hotel)
-        - subcategory : 세부 카테고리(b&b)
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | category | 큰 카테고리(hotel) |
+    | subcategory | 세부 카테고리(b&b) |
         
     - Cuisines(식당 카테고리만 해당)
     
     - Award Content
-        - awards : 수상 항목 표시
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | awards | 수상 항목 표시 |
     
     - Links to TripAdvisor(TripAdvisor 링크)
-        - web_url : 트립어드바이저 해당 장소 링크
-        - write_review : 리뷰 작성 링크
-        - see_all_photos : 사진 링크
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | web_url | 트립어드바이저 해당 장소 링크 |
+    | write_review | 리뷰 작성 링크 |
+    | see_all_photos | 사진 링크 |
     
     - Images
-        - 트립 어드바이저 평점 이미지
+        - 트립 어드바이저 평점 이미지 
 
 #### [Destination Content](https://developer-tripadvisor.com/content-api/destination-content/)
 - 설명
@@ -133,34 +154,52 @@ tags:
     
 - 데이터 목록
     - 기본 데이터
-        - location_id : 지역 고유 ID
-        - name : 지역명
-        - abbrv : 약어
-        - location_string : 일반적으로 쓰는 지역명
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | location_id | 지역 고유 ID |
+    | name | 지역명 |
+    | abbrv | 지역명 약어 |
+    | location_string | 일반적으로 쓰는 지역명 |
         
     - Address and Geocoding
-        - address_obj : 주소, 우편번호
-        - logitude : 경도
-        - latitude : 위도
-        - ancestors : 상위 주소(도시, 주, 국가)
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | address_obj | 주소, 우편번호 |
+    | logitude | 경도 |
+    | latitude | 위도 |
+    | ancestors | 상위 주소(도시, 주, 국가) |
     
     - Category Counts
-        - category_counts : 지역이 포함된 호텔, 식당, 명소 카운트
-        
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | category_counts | 지역이 포함된 호텔, 식당, 명소 카운트 |
+    
     - Categories, Subcategories, and Types
-        - category : 큰 카테고리(geographic)
-        - subcategory : 세부 카테고리(city)
-        - geo_type : narrow, broad, hybrid
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | category | 큰 카테고리(geographic) |
+    | subcategory | 세부 카테고리(city) |
+    | geo_type | narrow, broad, hybrid |
     
     - Award Content
-        - awards : 수상 항목 표시
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | awards | 수상 항목 표시 |
     
     - Links to TripAdvisor(TripAdvisor 링크)
-        - web_url : 트립어드바이저 해당 장소 링크
-        - see_all_photos : 사진 링크
-        - see_all_restaurants : 지역 식당 링크
-        - see_all_attractions : 지역 명소 링크
-        - see_all_hotels : 지역 호텔 링크
+    
+    | 항목               | 설명                 |
+    |:-----------------:|:------------------------|
+    | web_url | 트립어드바이저 해당 장소 링크 |
+    | see_all_photos | 사진 링크 |
+    | see_all_restaurants | 지역 식당 링크 |
+    | see_all_attractions | 지역 명소 링크 |
+    | see_all_hotels | 지역 호텔 링크 |
 
 ### 2.6. 지원 언어
 - [https://developer-tripadvisor.com/content-api/supported-languages/](https://developer-tripadvisor.com/content-api/supported-languages/)
