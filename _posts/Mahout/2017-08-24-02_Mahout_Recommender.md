@@ -10,7 +10,7 @@ tags:
 - 머하웃 추천
 
 ## 2. 추천 시스템 아키텍쳐
-![아키텍쳐](taste-architecture.png)
+![아키텍쳐](public/img/Mahout/taste-architecture.png)
 
 ## 3. 추천 시스템 처리 과정
 1. 데이터 모델 생성
