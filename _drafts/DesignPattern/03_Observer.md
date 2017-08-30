@@ -1,0 +1,1 @@
+# Observer 패턴

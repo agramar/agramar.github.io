@@ -1,3 +1,41 @@
 # 싱글턴 패턴(Singleton Pattern)
 
-- 소프트웨어 디자인 패턴에서 싱글턴 패턴(Singleton pattern)을 따르는 클래스는, 생성자가 여러 차례 호출되더라도 실제로 생성되는 객체는 하나이고 최초 생성 이후에 호출된 생성자는 최초의 생성자가 생성한 객체를 리턴한다. 이와 같은 디자인 유형을 싱글턴 패턴이라고 한다. 주로 공통된 객체를 여러개 생성해서 사용하는 DBCP(DataBase Connection Pool)와 같은 상황에서 많이 사용된다.
+## 1. 싱글턴 패턴 이란?
+- 디자인 패턴의 하나로, 한 프로그램 내에서 해당 클래스의 인스턴스가 하나만 만들어지고, 그 인스턴스에 접근할 수 있도록 하기 위한 패턴
+- 주로 하나의 프로그램 내에서 공통적으로 쓰이는 자원을 관리, 저장하는 역할을 할때 사용
+- 사용예 : 커넥션 풀, 스레드 풀, 디바이스 설정 객체
+
+## 2. 기본적인 형태
+- Singleton 클래스 선언
+```java
+public class Singleton {
+	private static Singleton singleton;
+	
+	private Singleton() {
+	}
+	
+	public static Singleton getInstance() {
+		if(singleton == null){
+			singleton = new Singleton();
+		}
+		return singleton;
+	}
+}
+```
+
+- Singleton 클래스 사용
+```java
+public class Main {
+	public static void main(String[] args) {
+		Singleton obj1 = Singleton.getInstance();
+		Singleton obj2 = Singleton.getInstance();
+		if(obj1 == obj2){
+			System.out.println("obj1과 obj2는 같은 인스턴스입니다.");
+		} else {
+			System.out.println("obj1과 obj2는 다른 인스턴스입니다.");
+		}
+	}
+}
+```
+
+## 3. 이슈

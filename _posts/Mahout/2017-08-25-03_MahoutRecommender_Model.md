@@ -7,6 +7,7 @@ tags:
 - Recommender Model
 ---
 
+# 추천기 종류
 ## 1. GenericUserBasedRecommender
 
 ## 2. GenericItemBasedRecommender
@@ -23,7 +24,7 @@ tags:
 
 ## 8. ALS-WR Recommender
 
-
+# 고려 사항
 수집 가능한 정보
 - 평점
 - 구매 이력
@@ -33,7 +34,7 @@ tags:
 도메인 특화정보
 - 사용자 정보 : 연령, 성별, 거주지, 직업
 - 호텔 정보 : 유형, 가격대, 위치
-- 시간 정보 : 
+- 시간 정보 : 계절
 
 정보들을 통해 적절한 추천 모델을 만들어 개인화 추천을 해주어야함
 

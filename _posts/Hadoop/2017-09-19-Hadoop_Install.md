@@ -1,3 +1,11 @@
+---
+layout: post
+title: 01 Hadoop 설치
+category: Hadoop
+tags:
+- Hadoop
+- Install
+---
 1. 하둡 다운로드
 - http://www.apache.org/dyn/closer.cgi/hadoop/common/
 ```bash
@@ -15,12 +23,15 @@ $ sudo tar -xzvf hadoop-2.7.4.tar.gz
 # cd /usr/local/src/hadoop/etc/hadoop
 # vim hadoop-env.sh
 ```
+
 ```
 export JAVA_HOME=${JAVA_HOME}
 ```
+
 ```bash
 # vim ~/.bashrc
 ```
+
 ```
 #HADOOP VARIABLES START
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
@@ -35,6 +46,7 @@ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_INSTALL/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib/native"
 #HADOOP VARIABLES END
 ```
+
 ```bash
 # source ~/.bashrc
 ```
