@@ -14,7 +14,7 @@ tags:
 
 ## 3. 추천 시스템 처리 과정
 1. 데이터 모델 생성
-    - 입력 데이터 규칙 : 사용자ID(정수, Long), 아이템ID(정수, Long), 선호수치(큰 값일수록 선호도가 높은 실수, 일반적으로 0~5사이의 값을 많이 사용, Double)
+    - 입력 데이터 규칙 : 사용자ID(정수, Long), 아이템ID(정수, Long), 선호수치(큰 값일수록 선호도가 높은 실수, 일반적으로 0~5사이의 값을 많이 사용, float)
     - 선호수치 데이터가 없을 경우 Boolean Preference를 이용하여 분석 가능 
 
 2. 유사도 모델 생성(유사도는 -1 ~ 1의 범위를 가지며 1과 가까울 수록 서로 유사하다는 의미)
@@ -25,8 +25,6 @@ tags:
         4. 맨하튼 거리 알고리즘         : CityBlockSimilarity
 
     - 사용자 기반 유사도 모델
-        - We could have created an item-based recommender instead. Item-based recommenders base recommendation not on user similarity, but on item similarity. In theory these are about the same approach to the problem, just from different angles. However the similarity of two items is relatively fixed, more so than the similarity of two users. So, item-based recommenders can use pre-computed similarity values in the computations, which make them much faster. For large data sets, item-based recommenders are more appropriate.
-        - 사용자 기반 유사도 모델은 나의 선호 행동을 기준으로 하기 때문에, 실시간으로 처리해야함 
         - 사용자 기반 유사도 모델 생성
             - param : DataModel, (가중치)
             - return : UserSimilarity

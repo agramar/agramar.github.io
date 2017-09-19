@@ -7,6 +7,7 @@ tags:
 - Recommender Model
 ---
 
+# 추천기 종류
 ## 1. GenericUserBasedRecommender
 
 ## 2. GenericItemBasedRecommender
@@ -23,7 +24,7 @@ tags:
 
 ## 8. ALS-WR Recommender
 
-
+# 고려 사항
 수집 가능한 정보
 - 평점
 - 구매 이력

@@ -1,3 +1,11 @@
+---
+layout: post
+title: 01 Hadoop 설치
+category: Hadoop
+tags:
+- Hadoop
+- Install
+---
 1. 하둡 다운로드
 - http://www.apache.org/dyn/closer.cgi/hadoop/common/
 ```bash
