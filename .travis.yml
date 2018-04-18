@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.3.3
 
-install: gem install bundler && bundle install
+install: gem install bundler && bundle install && bundle update
 script: jekyll build
 
 # 브랜치 화이트리스트. GitHub Pages 에서만 사용됨
