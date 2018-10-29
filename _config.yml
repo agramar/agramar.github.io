@@ -1,6 +1,6 @@
 # Site Info
-title: AGRAMAR Private Page
-tagline: 'Bullshit Page'
+title: AGRAMAR Page
+tagline: 'Hello'
 description: '우당탕탕'
 baseurl: ''
 url: 'http://agramar.github.io'
@@ -32,7 +32,7 @@ author:
     # email:     http://iamsjh1017@gmail.com/
     # linkedin:  https://www.linkedin.com/in/
     # facebook:  <hide>
-    # twitter:
+    # twitter: <hide>
 
 # Navigation (2nd level links supported)
 nav:
