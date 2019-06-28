@@ -1,3 +1,11 @@
+---
+layout: post
+title: 윈도우10에서 우분투 사용하기(Windows 10 Bash)
+category: WindowsUbuntuBash
+tags:
+- Ubuntu
+- Bash
+---
 # 윈도우10에서 우분투 사용하기(Windows 10 Bash)
 
 ## Windows 10 Bash
