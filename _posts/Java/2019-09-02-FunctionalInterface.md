@@ -20,6 +20,8 @@ tags:
 - 매개값은 있고, 리턴값은 없다.
 - 매개값 -> Consumer
 - interface : accept(), andThen()
+
+
 ```java
 Consumer<String> c1 = t -> System.out.println(t + "8");
 c1.accept("consumer");
@@ -54,6 +56,8 @@ olc.accept("consumer", 8);
 - 매개값은 없고, 리턴값은 있다.
 - Supplier -> 리턴값
 - interface : get()
+
+
 ```java
 Supplier<String> supplier = () -> {
     return "1";
@@ -71,6 +75,8 @@ System.out.println("supplier" + is.getAsInt());
 - 매개값도 있고, 리턴값도 있다. (매개값을 리턴값으로 매핑(형변환))
 - 매개값 -> Function -> 리턴값
 - interface : apply(), compose(), andThen()
+
+
 ```java
 Function<Integer, String> function = t -> {
     return "function" + t;
@@ -95,6 +101,8 @@ System.out.println(function.apply(8));
 #### 4. Operator
 - 매개값도 있고, 리턴값도 있다. (매개값을 연산하고 결과 리턴)
 - 매개값 -> Function -> 리턴값
+
+
 ```java
 // BiFunction 하위 인터페이스
 // apply(), compose(), andThen()
@@ -121,6 +129,8 @@ System.out.println("1 + 2 = " + ibo.applyAsInt(1, 2));
 - 매개값은 있고, 리턴타입은 boolean (매개값 조사후 boolean 리턴)
 - 매개값 -> Function -> boolean
 - interface : test(), negate(), and(), or(), isEqual()
+
+
 ```java
 public static void main(String[] args) {
     Predicate<Example> examplePredicate = t -> {
