@@ -1,3 +1,10 @@
+---
+layout: post
+title: 협업 필터링(COLLABORATIVE FILTERING) 모델
+category: Machine Learning
+tags:
+- COLLABORATIVE FILTERING
+---
 # 협업 필터링(COLLABORATIVE FILTERING) 모델
 
 #### 협업 필터링이란
@@ -7,7 +14,7 @@
 #### 사용예
 - 아마존 제품 추천 시스템(전체 매출의 30%)
 - 넷플릭스 영화 추천 시스템(컨텐츠 이용의 2/3)
-- 아마존과 넷플릭스는 제품 기반 필터링을 기반으로 자체 개발한 알고리즘을 활용한다고 알려져 있음 
+- 아마존과 넷플릭스는 제품 기반 필터링을 기반으로 자체 개발한 알고리즘을 활용한다고 알려져 있음
 
 #### 협업필터링의 종류
 ![Alt text](user-based_item-based_filtering.png)
@@ -44,11 +51,11 @@
     2. 피어슨 상관계수 : 두 객체 간의 선호도를 백터화 하여, 백터 사이의 각도가 적을 수록 유사
     3. 자카드 계수 : 두 객체 간의 요소들의 전체 요소들 중 교집합되는 요소가 차지하는 비중
     4. 맨해튼 거리
-    
+
 #### 유용한 라이브러리
 - Apache Mahout : 아파치 소프트웨어 재단의 한 프로젝트로서 분산처리가 가능하고 확장성을 가진 기계학습용 라이브러리
 - Apache Spark(MLlib) : 범용적 목적의 분산 고성능 클러스터링 플랫폼
-    
+
 #### References
 - https://www.slideshare.net/bage79/ss-45783615
 - https://www.slideshare.net/TaeYoungLee1/20141223-mahout

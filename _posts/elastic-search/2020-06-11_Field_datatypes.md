@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Field datatypes
-category: elasticsearch
+category: Elasticsearch
 tags:
 - elasticsearch
 ---
