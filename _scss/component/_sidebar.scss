@@ -1,19 +1,8 @@
 /*
  * Sidebar
- *
- * The sidebar is the drawer, the item we are toggling with our handy hamburger
- * button in the corner of the page.
- *
- * This particular sidebar implementation was inspired by Chris Coyier's
- * "Offcanvas Menu with CSS Target" article, and the checkbox variation from the
- * comments by a reader. It modifies both implementations to continue using the
- * checkbox (no change in URL means no polluted browser history), but this uses
- * `position` for the menu to avoid some potential content reflow issues.
- *
- * Source: http://css-tricks.com/off-canvas-menu-with-css-target/#comment-207504
  */
 
-/* Style and "hide" the sidebar */
+/* Sidebar 스타일 및 숨김 */
 .sidebar {
   position: fixed;
   top: 0;
@@ -21,10 +10,11 @@
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem; /* 15px */
-  color: rgba(255,255,255,.6);
-  @include transition(all .3s ease-in-out);
+  font-family: $font-sans;
+  font-size: .875rem;
+  color: rgba(255, 255, 255, .75);
+  background-color: var(--color-sidebar-bg);
+  transition: all .3s ease-in-out;
 
   @if $reverse-layout {
     left: auto;
@@ -33,24 +23,26 @@
     left: -14rem;
     right: auto;
   }
-
-  @if $theme-color != $default {
-    background-color: $theme-color;
-  } @else {
-    background-color: darken($theme-color-dark, 10%);
-  }
 }
+
 @media (min-width: 30em) {
   .sidebar {
-    font-size: .75rem; /* 14px */
+    font-size: .75rem;
   }
 }
 
-/* Sidebar content */
+/* Sidebar 내용 */
 .sidebar a {
   font-weight: normal;
-  color: $white;
+  color: rgba(255, 255, 255, .9);
+  transition: color 0.15s ease;
 }
+
+.sidebar a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 .sidebar-item {
   padding: 1rem;
 }
@@ -60,26 +52,26 @@
 
 /* Sidebar nav */
 .sidebar-nav {
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
 }
 .sidebar-nav-item {
   display: block;
   padding: .5rem 1rem;
-  border-top: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  color: rgba(255, 255, 255, .8);
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 .sidebar-nav-item-sub {
-  &:before {
-    content: "";
-    padding-left: 1em;
-  }
+  padding-left: 1.75rem;
   font-size: 85%;
-  line-height: 85%;
+  opacity: .85;
 }
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255, 255, 255, .12);
+  color: #fff;
   border-color: transparent;
 }
 
@@ -93,17 +85,19 @@ a.sidebar-nav-item:focus {
   }
 }
 
-/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+/* Sidebar 체크박스 숨김 */
 .sidebar-checkbox {
   position: absolute;
   opacity: 0;
-  @include prefixer(user-select, none, webkit moz spec);
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-/* Style the `label` that we use to target the `.sidebar-checkbox` */
+/* 사이드바 토글 버튼 */
 .sidebar-toggle {
   position: absolute;
   top:  .8rem;
+
   @if $reverse-layout {
     left: auto;
     right: 1rem;
@@ -111,33 +105,45 @@ a.sidebar-nav-item:focus {
     left: 1rem;
     right: auto;
   }
-  display: block;
-  padding: .25rem .75rem;
-  color: $theme-color;
-  background-color: $white;
-  border-radius: .25rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.5rem;
+  height: 1.1rem;
+  padding: 0;
   cursor: pointer;
+  border: none;
+  background: none;
+  z-index: 102;
+
+  /* 햄버거 라인 */
+  &::before,
+  &::after,
+  span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-link);
+    border-radius: 2px;
+    transition: all .25s ease;
+  }
 }
 
-.sidebar-toggle:before {
-  display: inline-block;
-  width: 1rem;
-  height: .75rem;
-  content: "";
-  @include background-image(linear-gradient(to bottom, $theme-color-dark, $theme-color-dark 20%, $white 20%, $white 40%, $theme-color-dark 40%, $theme-color-dark 60%, $white 60%, $white 80%, $theme-color-dark 80%, $theme-color-dark 100%));
-}
-
-.sidebar-toggle:active,
-#sidebar-checkbox:focus ~ .sidebar-toggle,
+/* 체크박스 체크 시 X 모양 */
+#sidebar-checkbox:checked ~ .wrap .sidebar-toggle,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  color: $white;
-  background-color: $theme-color;
-}
-
-.sidebar-toggle:active:before,
-#sidebar-checkbox:focus ~ .sidebar-toggle:before,
-#sidebar-checkbox:checked ~ .sidebar-toggle:before {
-  @include background-image(linear-gradient(to bottom, $white, $white 20%, $theme-color-dark 20%, $theme-color-dark 40%, $white 40%, $white 60%, $theme-color-dark 60%, $theme-color-dark 80%, $white 80%, $white 100%));
+  &::before {
+    transform: translateY(7px) rotate(45deg);
+    background-color: #fff;
+  }
+  span {
+    opacity: 0;
+  }
+  &::after {
+    transform: translateY(-7px) rotate(-45deg);
+    background-color: #fff;
+  }
 }
 
 @media (min-width: 30.1em) {
@@ -152,27 +158,17 @@ a.sidebar-nav-item:focus {
   }
 }
 
-/* Slide effect
- *
- * Handle the sliding effects of the sidebar and content in one spot, seperate
- * from the default styles.
- *
- * As an a heads up, we don't use `transform: translate3d()` here because when
- * mixed with `position: fixed;` for the sidebar toggle, it creates a new
- * containing block. Put simply, the fixed sidebar toggle behaves like
- * `position: absolute;` when transformed.
- *
- * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
- */
-
+/* 슬라이드 효과 */
 .wrap,
 .sidebar,
 .sidebar-toggle {
-  @include prefixer(backface-visibility, hidden, webkit ms spec);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
+
 .wrap,
 .sidebar-toggle {
-  @include transition(transform .3s ease-in-out);
+  transition: transform .3s ease-in-out;
 }
 
 #sidebar-checkbox:checked + .sidebar {
@@ -181,33 +177,82 @@ a.sidebar-nav-item:focus {
 }
 
 #sidebar-checkbox:checked ~ .wrap {
-  @include transform(translateX(if($overlay-sidebar,0,if($reverse-layout, -14rem, 14rem))));
+  @if $overlay-sidebar {
+    transform: translateX(0);
+  } @else {
+    @if $reverse-layout {
+      transform: translateX(-14rem);
+    } @else {
+      transform: translateX(14rem);
+    }
+  }
 }
 
 #sidebar-checkbox:checked ~ .sidebar {
-  @include transform(translateX(if($reverse-layout, -14rem, 14rem)));
-  @if $overlay-sidebar {
-    box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
-    @if $reverse-layout { box-shadow: -.25rem 0 .5rem rgba(0,0,0,.2); }
+  @if $reverse-layout {
+    transform: translateX(-14rem);
+  } @else {
+    transform: translateX(14rem);
   }
 }
 
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  @include transform(translateX(if($reverse-layout, -14rem, 14rem)));
-  @if $overlay-sidebar {
-    box-shadow: 0 0 0 .25rem $white;
+  @if $reverse-layout {
+    transform: translateX(-14rem);
+  } @else {
+    transform: translateX(14rem);
   }
 }
 
+/* 사이드바 개인정보 섹션 */
 .sidebar-personal-info {
   .sidebar-personal-info-section {
     &:not(:first-of-type) {
       margin-top: .75rem;
     }
-    line-height: 1rem;
+
+    line-height: 1.4;
+
+    img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, .3);
+      transition: border-color 0.15s ease;
+      display: block;
+      margin: 0 auto;
+
+      &:hover {
+        border-color: rgba(255, 255, 255, .7);
+      }
+    }
+
     a, strong {
-      color: $white;
+      color: rgba(255, 255, 255, .9);
       text-decoration: none;
+    }
+
+    .contact-icons {
+      display: flex;
+      gap: .75rem;
+      justify-content: center;
+      margin-top: .5rem;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .1);
+        transition: all 0.15s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, .25);
+        }
+      }
     }
   }
 }

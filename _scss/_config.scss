@@ -27,11 +27,76 @@ $reverse-layout: true;
 $overlay-sidebar: false;
 
 /* Font Import */
-@import url('/public/font/D2Coding-1.2/D2Coding.ttc');
-@import url('/public/font/D2Coding-1.2/D2Coding.ttf');
-@import url('/public/font/D2Coding-1.2/D2CodingBold.ttf');
+@font-face {
+  font-family: 'D2Coding';
+  src: url('/public/font/D2Coding-1.2/D2Coding.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'D2Coding';
+  src: url('/public/font/D2Coding-1.2/D2CodingBold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
 
 /* Font stack */
 $font-serif: "D2Coding", "PT Serif", Georgia, "Times New Roman", serif;
 $font-sans: "D2Coding", "PT Sans", Helvetica, Arial, sans-serif;
-$font-font-awesome: FontAwesome;
+$font-mono: "D2Coding", Menlo, Monaco, "Courier New", monospace;
+
+/* CSS Custom Properties (Light / Dark theme) */
+:root {
+  --color-bg: #fff;
+  --color-bg-secondary: #f8f9fa;
+  --color-text: #515151;
+  --color-text-strong: #303030;
+  --color-heading: #313131;
+  --color-link: #{$theme-color};
+  --color-link-hover: #{darken($theme-color, 12%)};
+  --color-border: #e5e5e5;
+  --color-border-light: #eee;
+  --color-code-bg: #f4f4f4;
+  --color-code-text: #bf616a;
+  --color-pre-bg: #282c34;
+  --color-pre-text: #abb2bf;
+  --color-blockquote-border: #{$theme-color};
+  --color-blockquote-text: #7a7a7a;
+  --color-masthead-bg: rgba(255, 255, 255, 0.92);
+  --color-masthead-border: #e8e8e8;
+  --color-sidebar-bg: #{$theme-color};
+  --color-post-date: #9a9a9a;
+  --color-tag-bg: #{lighten($theme-color, 38%)};
+  --color-tag-text: #{darken($theme-color, 5%)};
+  --color-table-odd: #f8f9fa;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --color-progress-bar: #{$theme-color};
+  --transition-speed: 0.25s;
+}
+
+[data-theme="dark"] {
+  --color-bg: #1a1b1e;
+  --color-bg-secondary: #25262b;
+  --color-text: #c9cdd4;
+  --color-text-strong: #e4e6ea;
+  --color-heading: #e4e6ea;
+  --color-link: #7ec8e3;
+  --color-link-hover: #a8dced;
+  --color-border: #3a3b40;
+  --color-border-light: #2e2f35;
+  --color-code-bg: #2a2b30;
+  --color-code-text: #e06c75;
+  --color-pre-bg: #1e1f24;
+  --color-pre-text: #abb2bf;
+  --color-blockquote-border: #7ec8e3;
+  --color-blockquote-text: #8a9bb0;
+  --color-masthead-bg: rgba(26, 27, 30, 0.95);
+  --color-masthead-border: #2e2f35;
+  --color-sidebar-bg: #25262b;
+  --color-post-date: #6b7280;
+  --color-tag-bg: #2a3040;
+  --color-tag-text: #7ec8e3;
+  --color-table-odd: #22232a;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-progress-bar: #7ec8e3;
+}
