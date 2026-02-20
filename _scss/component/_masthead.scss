@@ -1,33 +1,46 @@
 /*
  * Masthead
- *
- * Super small header above the content for site name and short description.
  */
 
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
-  border-bottom: 1px solid $lightgrey;
-  background-color: rgba(255,255,255,0.75);
+  border-bottom: 1px solid var(--color-masthead-border);
+  background-color: var(--color-masthead-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background-color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease;
+
   @media (min-width: 30rem) {
     position: fixed;
     width: 100%;
+    z-index: 100;
   }
+
   .masthead-title {
     margin-top: 0;
     margin-bottom: 0;
-    color: $theme-color;
+    color: var(--color-heading);
+
     a {
-      color: $theme-color;
+      color: var(--color-link);
       text-decoration: none;
+      transition: opacity 0.15s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
+
     small {
       font-size: 75%;
       font-weight: 400;
-      color: $masthead-title-small-color;
+      color: var(--color-post-date);
       letter-spacing: 0;
     }
+
     @media (max-width: 48em) {
       text-align: center;
       small {
@@ -35,6 +48,7 @@
       }
     }
   }
+
   .masthead-logo {
     height: 30px;
     width: auto;
@@ -42,5 +56,39 @@
     display: inline;
     padding: 0;
     margin: 0;
+    border-radius: 4px;
+  }
+
+  /* 다크모드 토글 버튼 */
+  .theme-toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: var(--color-bg-secondary);
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: .85rem;
+    transition: all 0.15s ease;
+    z-index: 101;
+
+    &:hover {
+      background: var(--color-link);
+      color: #fff;
+      border-color: var(--color-link);
+    }
+
+    @media (max-width: 30rem) {
+      right: 3rem;
+      top: .9rem;
+      transform: none;
+    }
   }
 }

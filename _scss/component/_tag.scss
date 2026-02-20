@@ -1,65 +1,101 @@
 .post-tag {
-  display: inline-block;
-  background: rgba($theme-color, 0.15);
-  padding: 0 .5rem;
-  margin-right: .5rem;
-  border-radius: 4px;
-  color: $theme-color;
+  display: inline-flex;
+  align-items: center;
+  gap: .3em;
+  background: var(--color-tag-bg);
+  padding: .15rem .6rem;
+  margin-right: .3rem;
+  margin-bottom: .25rem;
+  border-radius: 20px;
+  color: var(--color-tag-text);
   font-family: $font-sans;
-  font-size: 90%;
-  &:before {
+  font-size: .8rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+
+  &::before {
     content: "\f02b";
-    font-family: $font-font-awesome;
-    padding-right: .5em;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: .75em;
   }
+
   &:hover {
     text-decoration: none;
-    background: $theme-color;
-    color: $white;
+    background: var(--color-link);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px var(--color-shadow);
   }
-  @include transition(all .1s ease-in-out);
 }
 
 .tags-expo {
   :target:before {
-    content:"";
-    display:block;
-    height:72px; /* fixed header height*/
-    margin:-72px 0 0; /* negative fixed header height */
+    content: "";
+    display: block;
+    height: 72px;
+    margin: -72px 0 0;
   }
+
   .tags-expo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin-bottom: 2rem;
+
     @media (min-width: 38em) {
       font-size: 0.9rem;
-      .post-tag {
-        margin: .2em .3em;
-      }
     }
   }
+
   .tags-expo-section {
+    margin-bottom: 2.5rem;
+
+    h2 {
+      font-size: 1.1rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--color-border);
+      margin-bottom: 1rem;
+    }
+
     ul {
-      list-style-type: circle;
-      list-style-position: inside;
+      list-style: none;
       padding: 0;
+      margin: 0;
+
       li {
-        @include transition(all .1s ease-in-out);
-        padding: 0 1rem;
+        padding: .4rem .5rem;
+        border-bottom: 1px solid var(--color-border-light);
+        transition: background-color 0.1s ease;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
         &:hover {
-          list-style-type: disc;
-          padding: 0 .5rem;
+          background: var(--color-bg-secondary);
+          padding-left: .9rem;
         }
       }
     }
+
     a {
       text-decoration: none;
+      color: var(--color-text-strong);
+
+      &:hover {
+        color: var(--color-link);
+      }
     }
+
     .post-date {
       display: inline-block;
       font-size: 80%;
-      color: $post-date-color;
+      color: var(--color-post-date);
       margin: 0;
       padding: 0;
     }
+
     font-family: $font-sans;
   }
 }
-

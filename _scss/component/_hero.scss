@@ -1,10 +1,43 @@
 .hero {
+  position: relative;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px var(--color-shadow);
+
   img {
     height: 28rem;
-    width: auto;
-    display: inline;
-    margin-top: -1rem;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    color: #fff;
+    font-family: $font-sans;
+    font-size: 1rem;
+    border-radius: 0 0 8px 8px;
+  }
+
+  @media (max-width: 38em) {
+    img {
+      height: 16rem;
+    }
   }
 }

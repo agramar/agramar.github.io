@@ -2,43 +2,70 @@
 layout: default
 ---
 
+{% assign words = content | number_of_words %}
+{% if words < 200 %}
+  {% assign reading_time = 1 %}
+{% else %}
+  {% assign reading_time = words | divided_by: 200 %}
+{% endif %}
+
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {% if page.tags %} | 
-  {% for tag in page.tags %}
-    <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
-  {% endfor %}
+
+  <div class="post-meta">
+    <span class="post-date">
+      <i class="fa-regular fa-calendar"></i>
+      {{ page.date | date_to_string }}
+    </span>
+    <span class="post-reading-time">
+      <i class="fa-regular fa-clock"></i>
+      약 {{ reading_time }}분 읽기
+    </span>
+    {% if page.categories %}
+    <span style="color:var(--color-post-date);font-size:.8rem;display:inline-flex;align-items:center;gap:.3em;">
+      <i class="fa-solid fa-folder-open"></i>
+      {% for cat in page.categories %}
+        <a href="{{ site.baseurl }}/blog/categories/#{{ cat | slugify }}" style="color:var(--color-link);">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </span>
+    {% endif %}
+  </div>
+
+  {% if page.tags %}
+  <div style="margin-bottom:1.25rem;">
+    {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+    {% endfor %}
+  </div>
   {% endif %}
+
   <article>
     {{ content }}
   </article>
 </div>
 
 <div class="related">
-  <h2>Related Posts</h2>
+  <h2>관련 포스트</h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
       <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+          <small>{{ post.date | date_to_string }}</small>
+        </a>
       </li>
     {% endfor %}
   </ul>
 </div>
 
 {% if site.disqus_short_name %}
-<div class="comments">
-  <h2>Comments</h2>
+<div class="comments" style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--color-border);">
+  <h2>댓글</h2>
   <div id="disqus_thread"></div>
   <script>
 var disqus_config = function () {
-  this.page.url = '{{ site.url }}{{ page.url }}'; // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  this.page.url = '{{ site.url }}{{ page.url }}';
+  this.page.identifier = '{{ page.id }}';
 };
 (function() {
   var d = document, s = d.createElement('script');
@@ -47,6 +74,6 @@ var disqus_config = function () {
   (d.head || d.body).appendChild(s);
 })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  <noscript>댓글을 보려면 <a href="https://disqus.com/?ref_noscript" rel="nofollow">JavaScript를 활성화</a>해 주세요.</noscript>
 </div>
 {% endif %}
